@@ -20,7 +20,7 @@ class ArrayPlusOneSolutionTest {
 
         final int[] result = s.plusOne(arr);
 
-        Assertions.assertThat(result).containsExactlyInAnyOrder(expected);
+        Assertions.assertThat(result).containsExactly(expected);
     }
 
     static Stream<Arguments> arguments() {
