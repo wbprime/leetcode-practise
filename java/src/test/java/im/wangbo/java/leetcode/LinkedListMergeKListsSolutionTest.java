@@ -11,7 +11,7 @@ import java.util.stream.Stream;
  *
  * @author Elvis Wang
  */
-class MergeKListsSolutionTest {
+class LinkedListMergeKListsSolutionTest {
     @ParameterizedTest
     @MethodSource("arguments")
     void test(final String str, final String expected) {

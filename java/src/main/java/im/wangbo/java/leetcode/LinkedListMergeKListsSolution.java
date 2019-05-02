@@ -5,7 +5,7 @@ package im.wangbo.java.leetcode;
  *
  * @author Elvis Wang
  */
-class MergeKListsSolution {
+class LinkedListMergeKListsSolution {
     static class ListNode {
         int val;
         ListNode next;
