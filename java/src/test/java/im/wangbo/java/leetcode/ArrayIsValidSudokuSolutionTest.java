@@ -1,7 +1,6 @@
 package im.wangbo.java.leetcode;
 
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -14,11 +13,6 @@ import java.util.stream.Stream;
  * @author Elvis Wang
  */
 class ArrayIsValidSudokuSolutionTest {
-    @Test
-    void test() {
-
-    }
-
     @ParameterizedTest
     @MethodSource("arguments")
     void test(final char[][] arr, final boolean expected) {

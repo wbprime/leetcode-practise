@@ -1,8 +1,5 @@
 package im.wangbo.java.leetcode;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * See https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/1/array/30/
  *
