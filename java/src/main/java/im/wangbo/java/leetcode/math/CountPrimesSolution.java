@@ -1,4 +1,4 @@
-package im.wangbo.java.leetcode.design;
+package im.wangbo.java.leetcode.math;
 
 /**
  * See https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/25/math/61/

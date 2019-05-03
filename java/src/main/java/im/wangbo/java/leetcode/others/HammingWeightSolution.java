@@ -1,4 +1,4 @@
-package im.wangbo.java.leetcode.design;
+package im.wangbo.java.leetcode.others;
 
 /**
  * See https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/26/others/64/

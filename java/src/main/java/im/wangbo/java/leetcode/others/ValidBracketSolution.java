@@ -1,4 +1,4 @@
-package im.wangbo.java.leetcode.design;
+package im.wangbo.java.leetcode.others;
 
 import java.util.ArrayList;
 import java.util.List;

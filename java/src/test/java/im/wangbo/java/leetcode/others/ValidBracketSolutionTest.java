@@ -1,4 +1,4 @@
-package im.wangbo.java.leetcode.design;
+package im.wangbo.java.leetcode.others;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -12,20 +12,25 @@ import java.util.stream.Stream;
  *
  * @author Elvis Wang
  */
-class HammingDistanceSolutionTest {
+class ValidBracketSolutionTest {
     @ParameterizedTest
     @MethodSource("arguments")
-    void test(final int a, final int b, final int expected) {
-        final HammingDistanceSolution s = new HammingDistanceSolution();
+    void test(final String a, final boolean expected) {
+        final ValidBracketSolution s = new ValidBracketSolution();
 
-        final int result = s.hammingDistance(a, b);
+        final boolean result = s.isValid(a);
 
         Assertions.assertThat(result).isEqualTo(expected);
     }
 
     static Stream<Arguments> arguments() {
         return Stream.of(
-                Arguments.of(1, 4, 2)
+                Arguments.of("{[]}", true),
+                Arguments.of("([)]", false),
+                Arguments.of("(]", false),
+                Arguments.of("()[]{}", true),
+                Arguments.of("", true),
+                Arguments.of("()", true)
         );
     }
 }
