@@ -1,9 +1,5 @@
 package im.wangbo.java.leetcode.sorting;
 
-import sun.plugin2.ipc.InProcEvent;
-
-import java.util.function.IntPredicate;
-
 /**
  * See https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/8/sorting-and-searching/53/
  *
