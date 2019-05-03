@@ -1,4 +1,4 @@
-package im.wangbo.java.leetcode;
+package im.wangbo.java.leetcode.string;
 
 /**
  * See https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/5/strings/36/

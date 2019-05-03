@@ -1,4 +1,4 @@
-package im.wangbo.java.leetcode;
+package im.wangbo.java.leetcode.string;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -7,26 +7,28 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
+import im.wangbo.java.leetcode.string.StringFirstUniqCharSolution;
+
 /**
  * TODO add brief description here
  *
  * @author Elvis Wang
  */
-class StringIsAnagramSolutionTest {
+class StringFirstUniqCharSolutionTest {
     @ParameterizedTest
     @MethodSource("arguments")
-    void test(final String a, final String b, final boolean expected) {
-        final StringIsAnagramSolution s = new StringIsAnagramSolution();
+    void test(final String value, final int expected) {
+        final StringFirstUniqCharSolution s = new StringFirstUniqCharSolution();
 
-        final boolean result = s.isAnagram(a, b);
+        final int result = s.firstUniqChar(value);
 
         Assertions.assertThat(result).isEqualTo(expected);
     }
 
     static Stream<Arguments> arguments() {
         return Stream.of(
-                Arguments.of("anagram", "nagaram", true),
-                Arguments.of("rat", "car", false)
+                Arguments.of("leetcode", 0),
+                Arguments.of("loveleetcode", 2)
         );
     }
 }
