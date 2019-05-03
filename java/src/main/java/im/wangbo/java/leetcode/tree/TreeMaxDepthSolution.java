@@ -1,4 +1,4 @@
-package im.wangbo.java.leetcode;
+package im.wangbo.java.leetcode.tree;
 
 /**
  * See https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/7/trees/47/

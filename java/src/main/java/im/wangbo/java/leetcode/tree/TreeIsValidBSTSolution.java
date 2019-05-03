@@ -1,4 +1,4 @@
-package im.wangbo.java.leetcode;
+package im.wangbo.java.leetcode.tree;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package im.wangbo.java.leetcode;
+package im.wangbo.java.leetcode.tree;
 
 /**
  * TODO add brief description here
