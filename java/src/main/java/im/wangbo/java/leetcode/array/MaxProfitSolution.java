@@ -30,7 +30,7 @@ package im.wangbo.java.leetcode.array;
  *
  * @author Elvis Wang
  */
-public class MaxProfitSolution {
+class MaxProfitSolution {
     public int maxProfit(int[] prices) {
         int len = prices.length;
         if (len <= 1) return 0;

@@ -27,7 +27,7 @@ package im.wangbo.java.leetcode.array;
  *
  * @author Elvis Wang
  */
-public class RotateArraySolution {
+class RotateArraySolution {
     public void rotate(int[] nums, int k) {
         int len = nums.length;
         if (len <= 1) return;

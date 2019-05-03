@@ -12,7 +12,7 @@ import java.util.stream.Stream;
  *
  * @author Elvis Wang
  */
-public class LengthOfLongestSubstringSolutionTest {
+class LengthOfLongestSubstringSolutionTest {
     @ParameterizedTest
     @MethodSource("arguments")
     void test(final String str, final int expectedLen) {

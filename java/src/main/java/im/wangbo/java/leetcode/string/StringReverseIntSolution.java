@@ -23,7 +23,7 @@ package im.wangbo.java.leetcode.string;
  *
  * @author Elvis Wang
  */
-public class StringReverseIntSolution {
+class StringReverseIntSolution {
     public int reverse(int x) {
         if (0 == x) return x;
 

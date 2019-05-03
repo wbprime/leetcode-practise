@@ -50,7 +50,7 @@ package im.wangbo.java.leetcode.string;
  *
  * @author Elvis Wang
  */
-public class StringAtoiSolution {
+class StringAtoiSolution {
     public int myAtoi(final String str) {
         final int len = str.length();
 

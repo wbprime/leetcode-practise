@@ -40,7 +40,7 @@ package im.wangbo.java.leetcode.array;
  *
  * @author Elvis Wang
  */
-public class RemoveDuplicatesSolution {
+class RemoveDuplicatesSolution {
     public int removeDuplicates(int[] nums) {
         int len = nums.length;
 

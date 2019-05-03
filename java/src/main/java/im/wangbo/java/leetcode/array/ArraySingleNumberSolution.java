@@ -20,7 +20,7 @@ package im.wangbo.java.leetcode.array;
  *
  * @author Elvis Wang
  */
-public class ArraySingleNumberSolution {
+class ArraySingleNumberSolution {
     public int singleNumber(int[] nums) {
         int len = nums.length;
 

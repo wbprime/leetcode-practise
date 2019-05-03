@@ -18,7 +18,7 @@ package im.wangbo.java.leetcode.string;
  *
  * @author Elvis Wang
  */
-public class StringIsPalindromeSolution {
+class StringIsPalindromeSolution {
     public boolean isPalindrome(final String s) {
         final int len = s.length();
         if (len <= 1) return true;

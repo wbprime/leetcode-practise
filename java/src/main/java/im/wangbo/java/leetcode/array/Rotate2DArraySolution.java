@@ -47,7 +47,7 @@ package im.wangbo.java.leetcode.array;
  *
  * @author Elvis Wang
  */
-public class Rotate2DArraySolution {
+class Rotate2DArraySolution {
     public void rotate(int[][] matrix) {
         int len = matrix.length;
         if (len <= 1) return;

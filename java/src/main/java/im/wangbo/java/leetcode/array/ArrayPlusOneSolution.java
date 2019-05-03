@@ -22,7 +22,7 @@ package im.wangbo.java.leetcode.array;
  *
  * @author Elvis Wang
  */
-public class ArrayPlusOneSolution {
+class ArrayPlusOneSolution {
     public int[] plusOne(int[] digits) {
         int len = digits.length;
 

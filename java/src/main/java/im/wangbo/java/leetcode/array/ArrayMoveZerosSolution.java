@@ -16,7 +16,7 @@ package im.wangbo.java.leetcode.array;
  *
  * @author Elvis Wang
  */
-public class ArrayMoveZerosSolution {
+class ArrayMoveZerosSolution {
     public void moveZeros(int[] nums) {
         int len = nums.length;
         if (len <= 1) return;

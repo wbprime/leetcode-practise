@@ -22,7 +22,7 @@ package im.wangbo.java.leetcode.array;
  *
  * @author Elvis Wang
  */
-public class ArrayContainsDuplicateSolution {
+class ArrayContainsDuplicateSolution {
     public boolean containsDuplicate(int[] nums) {
         int len = nums.length;
         if (len <= 1) return false;

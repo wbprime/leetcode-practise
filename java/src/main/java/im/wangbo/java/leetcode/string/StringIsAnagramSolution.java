@@ -21,7 +21,7 @@ package im.wangbo.java.leetcode.string;
  *
  * @author Elvis Wang
  */
-public class StringIsAnagramSolution {
+class StringIsAnagramSolution {
     public boolean isAnagram(final String s, final String t) {
         final int len = s.length();
         if (len != t.length()) return false;

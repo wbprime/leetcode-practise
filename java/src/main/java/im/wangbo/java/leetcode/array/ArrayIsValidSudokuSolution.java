@@ -54,7 +54,7 @@ package im.wangbo.java.leetcode.array;
  *
  * @author Elvis Wang
  */
-public class ArrayIsValidSudokuSolution {
+class ArrayIsValidSudokuSolution {
     public boolean isValidSudoku(char[][] board) {
         boolean valid = true;
 

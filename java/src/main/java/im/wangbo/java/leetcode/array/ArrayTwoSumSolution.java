@@ -19,7 +19,7 @@ import java.util.Map;
  *
  * @author Elvis Wang
  */
-public class ArrayTwoSumSolution {
+class ArrayTwoSumSolution {
     public int[] twoSum(int[] nums, int target) {
         final int[] result = {-1, -1};
 

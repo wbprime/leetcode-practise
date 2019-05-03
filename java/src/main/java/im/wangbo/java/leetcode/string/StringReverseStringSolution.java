@@ -22,7 +22,7 @@ package im.wangbo.java.leetcode.string;
  *
  * @author Elvis Wang
  */
-public class StringReverseStringSolution {
+class StringReverseStringSolution {
     public void reverseString(char[] s) {
         int len = s.length;
         if (len <= 1) return;
