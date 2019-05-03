@@ -1,9 +1,7 @@
-package im.wangbo.java.leetcode;
+package im.wangbo.java.leetcode.design;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import im.wangbo.java.leetcode.design.MinStackSolution;
 
 /**
  * TODO add brief description here

@@ -1,4 +1,4 @@
-package im.wangbo.java.leetcode;
+package im.wangbo.java.leetcode.design;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,67 +9,37 @@ import java.util.List;
  * @author Elvis Wang
  */
 class MinStackSolution {
-    static class Node {
-        int val;
-        Node prev;
-        Node next;
-
-        Node(int x) {
-            this.val = x;
-            this.prev = null;
-            this.next = null;
-        }
-    }
-
     static class MinStack {
+        private final List<Integer> backend = new ArrayList<Integer>();
 
-        private final Node first = new Node(0);
-
-        private final List<Node> backend = new ArrayList<>();
+        private final List<Integer> minIndices = new ArrayList<Integer>();
 
         public void push(int x) {
-            final Node n = new Node(x);
+            backend.add(x);
 
-            Node cur = first;
-            Node next = cur.next;
-            while (null != next && next.val < x) {
-                cur = next;
-                next = cur.next;
+            if (minIndices.isEmpty() || x <= backend.get(minIndices.get(minIndices.size() - 1))) {
+                minIndices.add(backend.size() - 1);
             }
-            n.prev = cur;
-            if (null != next) {
-                next.prev = n;
-                n.next = next;
-            }
-            cur.next = n;
-
-            backend.add(n);
         }
 
         public void pop() {
             if (backend.isEmpty()) return;
 
-            final Node n = backend.get(backend.size() - 1);
+            final int idx = backend.size() - 1;
+            backend.remove(idx);
 
-            final Node prev = n.prev;
-            final Node next = n.next;
-            if (null != prev) {
-                prev.next = next;
+            if (! minIndices.isEmpty() && idx == minIndices.get(minIndices.size() - 1)) {
+                minIndices.remove(minIndices.size() - 1);
             }
-            if (null != next) {
-                next.prev = prev;
-            }
-
-            backend.remove(backend.size() - 1);
         }
 
         public int top() {
-            final Node n = backend.get(backend.size() - 1);
-            return n.val;
+            final int idx = backend.size() - 1;
+            return backend.get(idx);
         }
 
         public int getMin() {
-            return first.next.val;
+            return backend.get(minIndices.get(minIndices.size() - 1));
         }
     }
 }
