@@ -35,7 +35,7 @@ package im.wangbo.java.leetcode.design;
  * @author Elvis Wang
  */
 class HammingWeightSolution {
-    public int hammingWight(int n) {
+    public int hammingWeight(int n) {
         int count = 0;
 
         int tmp = n;

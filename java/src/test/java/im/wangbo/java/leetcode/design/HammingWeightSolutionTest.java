@@ -18,7 +18,7 @@ class HammingWeightSolutionTest {
     void test(final int a, final int expected) {
         final HammingWeightSolution s = new HammingWeightSolution();
 
-        final int result = s.hammingWight(a);
+        final int result = s.hammingWeight(a);
 
         Assertions.assertThat(result).isEqualTo(expected);
     }
