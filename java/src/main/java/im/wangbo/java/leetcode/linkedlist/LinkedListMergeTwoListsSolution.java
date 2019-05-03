@@ -1,4 +1,4 @@
-package im.wangbo.java.leetcode;
+package im.wangbo.java.leetcode.linkedlist;
 
 /**
  * See https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/6/linked-list/44/

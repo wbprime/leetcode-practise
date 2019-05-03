@@ -1,9 +1,11 @@
-package im.wangbo.java.leetcode;
+package im.wangbo.java.leetcode.linkedlist;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.ThreadLocalRandom;
+
+import im.wangbo.java.leetcode.linkedlist.LinkedListReverseListSolution;
 
 /**
  * TODO add brief description here
