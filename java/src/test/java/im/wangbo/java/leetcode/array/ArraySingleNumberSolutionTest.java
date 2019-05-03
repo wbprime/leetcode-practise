@@ -1,4 +1,4 @@
-package im.wangbo.java.leetcode;
+package im.wangbo.java.leetcode.array;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -7,26 +7,28 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
+import im.wangbo.java.leetcode.array.ArraySingleNumberSolution;
+
 /**
  * TODO add brief description here
  *
  * @author Elvis Wang
  */
-class MaxProfitSolutionTest {
+class ArraySingleNumberSolutionTest {
     @ParameterizedTest
     @MethodSource("arguments")
     void test(final int[] arr, final int expected) {
-        final MaxProfitSolution s = new MaxProfitSolution();
-        final int result = s.maxProfit(arr);
+        final ArraySingleNumberSolution s = new ArraySingleNumberSolution();
+
+        final int result = s.singleNumber(arr);
 
         Assertions.assertThat(result).isEqualTo(expected);
     }
 
     static Stream<Arguments> arguments() {
         return Stream.of(
-                Arguments.of(new int[]{7, 1, 5, 3, 6, 4}, 7),
-                Arguments.of(new int[]{7, 6, 4, 3, 1}, 0),
-                Arguments.of(new int[]{1, 2, 3, 4, 5}, 4)
+                Arguments.of(new int[]{2, 2, 1}, 1),
+                Arguments.of(new int[]{4, 1, 2, 1, 2}, 4)
         );
     }
 }

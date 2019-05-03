@@ -1,4 +1,4 @@
-package im.wangbo.java.leetcode;
+package im.wangbo.java.leetcode.array;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -7,26 +7,27 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
+import im.wangbo.java.leetcode.array.RemoveDuplicatesSolution;
+
 /**
  * TODO add brief description here
  *
  * @author Elvis Wang
  */
-class ArraySingleNumberSolutionTest {
+class RemoveDuplicatesSolutionTest {
     @ParameterizedTest
     @MethodSource("arguments")
     void test(final int[] arr, final int expected) {
-        final ArraySingleNumberSolution s = new ArraySingleNumberSolution();
-
-        final int result = s.singleNumber(arr);
+        final RemoveDuplicatesSolution s = new RemoveDuplicatesSolution();
+        final int result = s.removeDuplicates(arr);
 
         Assertions.assertThat(result).isEqualTo(expected);
     }
 
     static Stream<Arguments> arguments() {
         return Stream.of(
-                Arguments.of(new int[]{2, 2, 1}, 1),
-                Arguments.of(new int[]{4, 1, 2, 1, 2}, 4)
+                Arguments.of(new int[]{1, 1, 2}, 2),
+                Arguments.of(new int[]{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}, 5)
         );
     }
 }

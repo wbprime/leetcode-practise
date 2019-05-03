@@ -1,4 +1,4 @@
-package im.wangbo.java.leetcode;
+package im.wangbo.java.leetcode.array;
 
 import java.util.HashMap;
 import java.util.Map;
