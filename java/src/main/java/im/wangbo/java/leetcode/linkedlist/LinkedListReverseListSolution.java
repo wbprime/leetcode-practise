@@ -14,16 +14,7 @@ package im.wangbo.java.leetcode.linkedlist;
  *
  * @author Elvis Wang
  */
-public class LinkedListReverseListSolution {
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(final int v) {
-            this.val = v;
-        }
-    }
-
+class LinkedListReverseListSolution {
     public ListNode reverseList(final ListNode head) {
         if (null == head || head.next == null) return head;
 

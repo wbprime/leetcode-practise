@@ -39,14 +39,6 @@ package im.wangbo.java.leetcode.linkedlist;
  * @author Elvis Wang
  */
 class LinkedListHasCycleSolution {
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(final int val) {
-            this.val = val;
-        }
-    }
 
     public boolean hasCycle(ListNode head) {
         if (null == head || null == head.next) return false;

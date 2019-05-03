@@ -19,15 +19,6 @@ package im.wangbo.java.leetcode.linkedlist;
  * @author Elvis Wang
  */
 class LinkedListIsPalindromeSolution {
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(final int val) {
-            this.val = val;
-        }
-    }
-
     public boolean isPalindrome(ListNode head) {
         if (null == head || null == head.next) return true;
 

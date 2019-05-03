@@ -7,8 +7,6 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-import im.wangbo.java.leetcode.linkedlist.LinkedListIsPalindromeSolution;
-
 /**
  * TODO add brief description here
  *
@@ -17,7 +15,7 @@ import im.wangbo.java.leetcode.linkedlist.LinkedListIsPalindromeSolution;
 class LinkedListIsPalindromeSolutionTest {
     @ParameterizedTest
     @MethodSource("arguments")
-    void test(final LinkedListIsPalindromeSolution.ListNode head, boolean expected) {
+    void test(final ListNode head, boolean expected) {
         final LinkedListIsPalindromeSolution s = new LinkedListIsPalindromeSolution();
 
         final boolean result = s.isPalindrome(head);
@@ -25,12 +23,11 @@ class LinkedListIsPalindromeSolutionTest {
         Assertions.assertThat(result).isEqualTo(expected);
     }
 
-    static LinkedListIsPalindromeSolution.ListNode create(final int[] arr) {
-        final LinkedListIsPalindromeSolution.ListNode head = new LinkedListIsPalindromeSolution.ListNode(-1);
-        LinkedListIsPalindromeSolution.ListNode node = head;
+    static ListNode create(final int[] arr) {
+        final ListNode head = new ListNode(-1);
+        ListNode node = head;
         for (int i = 0; i < arr.length; i++) {
-            final LinkedListIsPalindromeSolution.ListNode next =
-                    new LinkedListIsPalindromeSolution.ListNode(arr[i]);
+            final ListNode next = new ListNode(arr[i]);
             node.next = next;
             node = next;
         }

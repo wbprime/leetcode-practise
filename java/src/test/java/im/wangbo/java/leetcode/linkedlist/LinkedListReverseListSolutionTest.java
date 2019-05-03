@@ -5,8 +5,6 @@ import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-import im.wangbo.java.leetcode.linkedlist.LinkedListReverseListSolution;
-
 /**
  * TODO add brief description here
  *
@@ -16,11 +14,11 @@ class LinkedListReverseListSolutionTest {
     @Test
     void test() {
         final int n = ThreadLocalRandom.current().nextInt(100) + 1;
-        LinkedListReverseListSolution.ListNode node = new LinkedListReverseListSolution.ListNode(-1);
-        LinkedListReverseListSolution.ListNode head = node;
+        ListNode node = new ListNode(-1);
+        ListNode head = node;
 
         for (int i = 0; i < n; i++) {
-            LinkedListReverseListSolution.ListNode next = new LinkedListReverseListSolution.ListNode(i);
+            ListNode next = new ListNode(i);
             node.next = next;
             node = next;
         }
@@ -28,10 +26,10 @@ class LinkedListReverseListSolutionTest {
 
         final LinkedListReverseListSolution s = new LinkedListReverseListSolution();
 
-        final LinkedListReverseListSolution.ListNode result = s.reverseList(head);
+        final ListNode result = s.reverseList(head);
 
         {
-            LinkedListReverseListSolution.ListNode tmp = result;
+            ListNode tmp = result;
             for (int i = n - 1; i >= -1; i--) {
                 Assertions.assertThat(tmp.val).isEqualTo(i);
                 tmp = tmp.next;

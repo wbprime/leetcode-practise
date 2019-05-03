@@ -13,15 +13,6 @@ package im.wangbo.java.leetcode.linkedlist;
  * @author Elvis Wang
  */
 class LinkedListMergeTwoListsSolution {
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(final int val) {
-            this.val = val;
-        }
-    }
-
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if (null == l1) return l2;
         if (null == l2) return l1;
