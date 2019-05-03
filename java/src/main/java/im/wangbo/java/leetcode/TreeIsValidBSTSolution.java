@@ -36,16 +36,6 @@ import java.util.List;
  * @author Elvis Wang
  */
 class TreeIsValidBSTSolution {
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(final int val) {
-            this.val = val;
-        }
-    }
-
     public boolean isValidBST(TreeNode root) {
         if (null == root) return true;
 

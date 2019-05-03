@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 class TreeIsValidBSTSolutionTest {
     @ParameterizedTest
     @MethodSource("arguments")
-    void test(final TreeIsValidBSTSolution.TreeNode root, final boolean expected) {
+    void test(final TreeNode root, final boolean expected) {
         final TreeIsValidBSTSolution s = new TreeIsValidBSTSolution();
 
         final boolean result = s.isValidBST(root);
@@ -32,41 +32,41 @@ class TreeIsValidBSTSolutionTest {
         );
     }
 
-    static TreeIsValidBSTSolution.TreeNode create4() {
-        TreeIsValidBSTSolution.TreeNode root = new TreeIsValidBSTSolution.TreeNode(1);
-        root.left = new TreeIsValidBSTSolution.TreeNode(1);
+    static TreeNode create4() {
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(1);
         return root;
     }
 
-    static TreeIsValidBSTSolution.TreeNode create3() {
-        TreeIsValidBSTSolution.TreeNode root = new TreeIsValidBSTSolution.TreeNode(10);
+    static TreeNode create3() {
+        TreeNode root = new TreeNode(10);
 
-        root.left = new TreeIsValidBSTSolution.TreeNode(5);
+        root.left = new TreeNode(5);
 
-        root.right = new TreeIsValidBSTSolution.TreeNode(15);
+        root.right = new TreeNode(15);
 
-        root.right.left = new TreeIsValidBSTSolution.TreeNode(6);
-        root.right.right = new TreeIsValidBSTSolution.TreeNode(20);
+        root.right.left = new TreeNode(6);
+        root.right.right = new TreeNode(20);
 
         return root;
     }
 
-    static TreeIsValidBSTSolution.TreeNode create2() {
-        TreeIsValidBSTSolution.TreeNode root = new TreeIsValidBSTSolution.TreeNode(2);
-        root.left = new TreeIsValidBSTSolution.TreeNode(1);
-        root.right = new TreeIsValidBSTSolution.TreeNode(3);
+    static TreeNode create2() {
+        TreeNode root = new TreeNode(2);
+        root.left = new TreeNode(1);
+        root.right = new TreeNode(3);
         return root;
     }
 
-    static TreeIsValidBSTSolution.TreeNode create1() {
-        TreeIsValidBSTSolution.TreeNode root = new TreeIsValidBSTSolution.TreeNode(5);
+    static TreeNode create1() {
+        TreeNode root = new TreeNode(5);
 
-        root.left = new TreeIsValidBSTSolution.TreeNode(1);
+        root.left = new TreeNode(1);
 
-        root.right = new TreeIsValidBSTSolution.TreeNode(4);
+        root.right = new TreeNode(4);
 
-        root.right.left = new TreeIsValidBSTSolution.TreeNode(3);
-        root.right.right = new TreeIsValidBSTSolution.TreeNode(6);
+        root.right.left = new TreeNode(3);
+        root.right.right = new TreeNode(6);
 
         return root;
     }

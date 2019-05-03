@@ -22,16 +22,6 @@ package im.wangbo.java.leetcode;
  * @author Elvis Wang
  */
 class TreeMaxDepthSolution {
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(final int val) {
-            this.val = val;
-        }
-    }
-
     public int maxDepth(TreeNode root) {
         if (null == root) return 0;
 
