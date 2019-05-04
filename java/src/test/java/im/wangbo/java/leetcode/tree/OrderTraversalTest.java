@@ -24,6 +24,17 @@ class OrderTraversalTest {
     }
 
     @Test
+    void preorderByStack() {
+        final PreorderTraversalByStack traversal = new PreorderTraversalByStack();
+
+        final List<Integer> list = new ArrayList<>();
+
+        traversal.traverse(create(), consumer(list));
+
+        Assertions.assertThat(list).containsExactly(5, 1, 4, 3, 6);
+    }
+
+    @Test
     void inorder() {
         final InorderTraversal traversal = new InorderTraversal();
 
@@ -35,8 +46,30 @@ class OrderTraversalTest {
     }
 
     @Test
+    void inorderByStack() {
+        final InorderTraversalByStack traversal = new InorderTraversalByStack();
+
+        final List<Integer> list = new ArrayList<>();
+
+        traversal.traverse(create(), consumer(list));
+
+        Assertions.assertThat(list).containsExactly(1, 5, 3, 4, 6);
+    }
+
+    @Test
     void postorder() {
         final PostorderTraversal traversal = new PostorderTraversal();
+
+        final List<Integer> list = new ArrayList<>();
+
+        traversal.traverse(create(), consumer(list));
+
+        Assertions.assertThat(list).containsExactly(1, 3, 6, 4, 5);
+    }
+
+    @Test
+    void postorderByStack() {
+        final PostorderTraversalByStack traversal = new PostorderTraversalByStack();
 
         final List<Integer> list = new ArrayList<>();
 
