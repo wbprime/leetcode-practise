@@ -1,5 +1,7 @@
 package im.wangbo.wbprime.leetcode.mergesort;
 
+import im.wangbo.wbprime.leetcode.ListNode;
+
 /**
  * TODO add description here.
  *
@@ -7,15 +9,6 @@ package im.wangbo.wbprime.leetcode.mergesort;
  * @since 1.0.0
  */
 public class MergeSortLinkedListSolution {
-    public static class ListNode {
-        int val;
-        ListNode next = null;
-
-        public ListNode(int val) {
-            this.val = val;
-        }
-    }
-
     public ListNode sort(final ListNode list) {
         if (null == list || list.next == null) return list;
 
