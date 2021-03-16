@@ -37,11 +37,15 @@ class ListNodes {
     }
 
     static void assertEquals(ListNode list, int[] arr) {
+        assertEquals(list, arr, arr.length)
+    }
+
+    static void assertEquals(ListNode list, int[] arr, int len) {
         int n = 0
         while (list != null) {
-            list.val = arr[n++]
+            assert list.val == arr[n++]
             list = list.next
         }
-        assert n == arr.length
+        assert n == len
     }
 }

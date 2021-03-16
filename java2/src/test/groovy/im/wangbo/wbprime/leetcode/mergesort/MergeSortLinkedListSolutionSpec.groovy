@@ -1,5 +1,6 @@
 package im.wangbo.wbprime.leetcode.mergesort
 
+import com.google.common.primitives.Ints
 import im.wangbo.wbprime.leetcode.ArrayDatas
 import im.wangbo.wbprime.leetcode.ListNodes
 import spock.lang.Specification
@@ -16,7 +17,7 @@ class MergeSortLinkedListSolutionSpec extends Specification {
         int[] arr = ArrayDatas.random(ArrayDatas.randomValue(0, 100), -100, 100)
         def head = ListNodes.create(arr)
 
-        Arrays.sort(arr)
+        Ints.sortDescending(arr)
 
         def s = new MergeSortLinkedListSolution()
 //        ListNodes.print head
