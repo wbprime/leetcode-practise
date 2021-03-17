@@ -61,4 +61,28 @@ public class ArrayDatas {
             assert arr[i - 1] <= arr[i]
         }
     }
+
+    static void printMatrix(int[][] matrix) {
+        print "["
+        if (matrix.length > 0) {
+            println ""
+            printArray(matrix[0])
+        }
+        for (int i = 1; i < matrix.length; i++) {
+            println ","
+            printArray(matrix[i])
+        }
+        if (matrix.length > 0) println ""
+        println "]"
+    }
+
+    static void printArray(int[] arr) {
+        print "["
+        if (arr.length > 0) print arr[0]
+        for (int i = 1; i < arr.length; i++) {
+            print ", "
+            print arr[i]
+        }
+        print "]"
+    }
 }
