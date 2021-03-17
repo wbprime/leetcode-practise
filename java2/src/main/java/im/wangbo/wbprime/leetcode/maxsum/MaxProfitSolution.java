@@ -7,52 +7,61 @@ package im.wangbo.wbprime.leetcode.maxsum;
  * @since 1.0.0
  */
 public class MaxProfitSolution {
-    public int solve(final int[] arr) {
-        if (arr.length > 1) {
-            /* index for max item of arr[0] .. arr[i] */
-            int maxIdx = 0;
-            /* index for min item of arr[0] .. arr[maxIdx] */
-            int minIdx = 0;
-            /* index for min item of arr[maxIdx] .. arr[i] */
-            int newMinIdx = 0;
-            for (int i = 1; i < arr.length; i++) {
-                if (arr[maxIdx] <= arr[i]) {
-                    maxIdx = i;
+    public int maxProfit(final int[] arr) {
+        if (arr.length < 2) return 0;
 
-                    if (arr[minIdx] > arr[newMinIdx]) {
-                        minIdx = newMinIdx;
-                        newMinIdx = i;
-                    }
-                } else {
-                    if (arr[newMinIdx] > arr[i]) newMinIdx = i;
-                }
-
-                if (arr[i] - arr[newMinIdx] > arr[maxIdx] - arr[minIdx]) {
-
-                }
-            }
-            return minIdx < maxIdx ? arr[maxIdx] - minIdx : 0;
-        } else {
-            return 0;
-        }
-    }
-
-    public int maxSum(final int[] arr) {
-        if (arr.length == 0) return 0;
-
-        int sum = 0;
-        int maxSum = 0;
-
-        for (int i = 0; i < arr.length; i++) {
+        int sum = arr[1] - arr[0];
+        int maxSum = sum;
+        for (int i = 2; i < arr.length; i++) {
+            final int profit = arr[i] - arr[i - 1];
             if (sum < 0) {
-                sum = arr[i];
+                sum = profit;
             } else {
-                sum += arr[i];
+                sum += profit;
             }
 
             if (sum > maxSum) maxSum = sum;
         }
+        return Math.max(0, maxSum);
+    }
 
-        return maxSum;
+    public int[] maxProfitAndBeginEnd(final int[] arr) {
+        final int[] result = new int[3];
+        result[0] = 0; // max profit
+        result[1] = -1; // beg
+        result[2] = -1; // end
+
+        if (arr.length < 2) return result;
+
+        int sum = arr[1] - arr[0];
+        result[0] = sum;
+        result[1] = 0;
+        result[2] = 1;
+
+        int beg = 0;
+        for (int i = 2; i < arr.length; i++) {
+            final int profit = arr[i] - arr[i - 1];
+            if (sum < 0) {
+                sum = profit;
+
+                beg = i - 1;
+            } else {
+                sum += profit;
+            }
+
+            if (sum >= result[0]) {
+                result[0] = sum;
+                result[1] = beg;
+                result[2] = i;
+            }
+        }
+
+        if (result[0] <= 0) {
+            result[0] = 0;
+            result[1] = -1;
+            result[2] = -1;
+        }
+
+        return result;
     }
 }
